@@ -71,7 +71,7 @@ class PesertaController extends Controller
     public function actionCreate()
     {
         $model = new Peserta();
-
+        $cek = "Tes";
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -82,6 +82,7 @@ class PesertaController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'cek' => $cek
         ]);
     }
 

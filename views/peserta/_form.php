@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 <div class="peserta-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+    <?= $cek ?>
     <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
